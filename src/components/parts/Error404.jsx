@@ -20,7 +20,10 @@ export const Error404 = () => {
                 are looking for.
               </p>
               <Link href={"home"}>
-                <Badges text={"Back To Home"} classEdit={"py-[10px] px-4"} />
+                <Badges
+                  text={"Back To Home"}
+                  classEdit={" py-[10px] px-4 hover:scale-[1.05]"}
+                />
               </Link>
             </div>
           </div>

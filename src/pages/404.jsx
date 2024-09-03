@@ -1,9 +1,11 @@
 import { ErrorPage } from "@/components/pages/ErrorPage";
 
-export default function Error() {
+const Error = () => {
   return (
     <main>
       <ErrorPage />
     </main>
   );
-}
+};
+
+export default Error;

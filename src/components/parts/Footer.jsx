@@ -1,4 +1,5 @@
-import { FooterHeadButtons } from "../buttons";
+import Link from "next/link";
+import { FooterHeadButtons, HeaderButton } from "../buttons";
 import { GmailNumber, GmailPhone } from "../component";
 import {
   FacebookIcon,
@@ -37,9 +38,15 @@ export const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2 max-w-[280px]">
-              <FooterHeadButtons text={"Home"} />
-              <FooterHeadButtons text={"Blog"} />
-              <FooterHeadButtons text={"Contact"} />
+              <Link href={"home"}>
+                <FooterHeadButtons text={"Home"} />
+              </Link>
+              <Link href={"blog"}>
+                <FooterHeadButtons text={"Blog"} />
+              </Link>
+              <Link href={"contact"}>
+                <FooterHeadButtons text={"Contact"} />
+              </Link>
             </div>
             <div className="flex gap-5 max-w-[280px]">
               <FacebookIcon />

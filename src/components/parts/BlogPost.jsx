@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BolgButtons, BlogButtonsYellow } from "../buttons";
 import { BlogPostCard } from "../component";
 
-export const BlogPost = () => {
+export const BlogPost = ({ articles }) => {
   return (
     <main className="">
       <div className="container m-auto">
@@ -27,16 +27,20 @@ export const BlogPost = () => {
           </div>
           <div className="flex flex-col gap-6 items-center">
             <div className="flex gap-5 justify-between items-center flex-wrap w-full">
-              <BlogPostCard text={"Design"} />
-              <BlogPostCard text={"Design"} />
-              <BlogPostCard text={"Design"} />
+              {articles.map((articl) => {
+                return (
+                  <BlogPostCard
+                    title={articl.description}
+                    imgUrl={articl.cover_image}
+                    tag={articl.tag_list[0]}
+                  />
+                );
+              })}
             </div>
             <button>
-              <div className="px-5 py-3 border border-[#696a754d] rounded-md">
-                <p className="font-workSans font-medium not-italic text-base text-[#696A75]">
-                  Load More
-                </p>
-              </div>
+              <p className="px-5 py-3 border border-[#696a754d] hover:border-[#4B6BFB] hover:text-[#4B6BFB] rounded-md font-workSans font-medium not-italic text-base text-[#696A75]">
+                Load More
+              </p>
             </button>
           </div>
         </div>

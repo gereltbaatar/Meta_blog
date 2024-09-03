@@ -1,5 +1,7 @@
 import { AllBlogPage } from "@/components/pages";
 
-export default function Blog() {
+const Blog = () => {
   return <AllBlogPage />;
-}
+};
+
+export default Blog;

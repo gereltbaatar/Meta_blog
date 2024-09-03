@@ -61,7 +61,10 @@ export const ContactUs = () => {
                     placeholder="Write a message"
                   />
                 </div>
-                <Badges classEdit={"py-[10px] px-4"} text={"Send Message"} />
+                <Badges
+                  classEdit={"py-[10px] px-4 hover:scale-[1.05]"}
+                  text={"Send Message"}
+                />
               </div>
             </div>
           </div>
