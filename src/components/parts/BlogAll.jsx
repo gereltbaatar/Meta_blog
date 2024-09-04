@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { BlogAllPostCard } from "../component";
 
-export const BlogAll = ({ articles }) => {
+export const BlogAll = ({ articles, handleClickAllBlog }) => {
   return (
     <main className="">
       <div className="container m-auto">
@@ -12,20 +13,22 @@ export const BlogAll = ({ articles }) => {
           </div>
           <div className="flex flex-col gap-6 items-center">
             <div className="flex justify-between gap-5 flex-wrap w-full">
-              {articles.map((articl) => {
+              {articles.map((article) => {
                 return (
-                  <BlogAllPostCard
-                    title={articl.description}
-                    imgUrl={articl.cover_image}
-                    tag={articl.tag_list[0]}
-                    userName={articl.user.name}
-                    profile_image={articl.user.profile_image}
-                    date={articl.created_at}
-                  />
+                  <Link href={`/blog/${article.id}`}>
+                    <BlogAllPostCard
+                      title={article.description}
+                      imgUrl={article.cover_image}
+                      tag={article.tag_list[0]}
+                      userName={article.user.name}
+                      profile_image={article.user.profile_image}
+                      date={article.created_at}
+                    />
+                  </Link>
                 );
               })}
             </div>
-            <button>
+            <button onClick={handleClickAllBlog}>
               <p className="px-5 py-3 border border-[#696a754d] rounded-md hover:border-[#4B6BFB] hover:text-[#4B6BFB] font-workSans font-medium not-italic text-base text-[#696A75]">
                 Load More
               </p>

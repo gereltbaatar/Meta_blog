@@ -11,7 +11,7 @@ export const Header = () => {
             <div className="flex justify-between">
               <HeaderIcon />
               <div className="flex justify-center items-center gap-10">
-                <Link href={"home"}>
+                <Link href={"./"}>
                   <HeaderButton text={"Home"} />
                 </Link>
                 <Link href={"blog"}>

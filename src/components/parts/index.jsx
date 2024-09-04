@@ -6,3 +6,4 @@ export * from "./BlogPost";
 export * from "./BlogAll";
 export * from "./Footer";
 export * from "./Error404";
+export * from "./SinglePost";
