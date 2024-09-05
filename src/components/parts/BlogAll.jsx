@@ -4,7 +4,7 @@ import { BlogAllPostCard } from "../component";
 export const BlogAll = ({ articles, handleClickAllBlog }) => {
   return (
     <main className="">
-      <div className="container m-auto">
+      <div className="container m-auto mt-24">
         <div className="flex flex-col gap-8 px-20">
           <div className="flex flex-col gap-8">
             <h1 className="font-workSans text-2xl not-italic font-bold text-[#181A2A]">

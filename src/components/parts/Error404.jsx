@@ -4,7 +4,7 @@ import { Badges } from "../buttons";
 export const Error404 = () => {
   return (
     <main className="">
-      <div className="container m-auto">
+      <div className="container m-auto mt-24">
         <div className="flex flex-col px-20">
           <div className="flex items-center justify-center gap-10">
             <h1 className="flex justify-center items-center font-workSans font-normal not-italic text-7xl leading-[72px]">
@@ -19,7 +19,7 @@ export const Error404 = () => {
                 We're sorry, This page is unknown or does not exist the page you
                 are looking for.
               </p>
-              <Link href={"home"}>
+              <Link href={"./"}>
                 <Badges
                   text={"Back To Home"}
                   classEdit={" py-[10px] px-4 hover:scale-[1.05]"}

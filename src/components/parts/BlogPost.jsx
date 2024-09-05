@@ -1,8 +1,16 @@
 import Link from "next/link";
-import { BolgButtons, BlogButtonsYellow } from "../buttons";
+import { BlogButtonsYellow } from "../buttons";
 import { BlogPostCard } from "../component";
+import {
+  BlogButtonsBranding,
+  BlogButtonsDesign,
+  BlogButtonsFashion,
+  BlogButtonsSeeAll,
+  BlogButtonsTechnology,
+  BlogButtonsTravel,
+} from "../buttons/BlogButtons1";
 
-export const BlogPost = ({ articles, handleClickLoadMore }) => {
+export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
   return (
     <main className="">
       <div className="container m-auto">
@@ -13,15 +21,15 @@ export const BlogPost = ({ articles, handleClickLoadMore }) => {
             </h1>
             <div className="flex justify-between">
               <div className="flex  items-center gap-5">
-                <BlogButtonsYellow text={"All"} />
-                <BolgButtons text={"Design"} />
-                <BolgButtons text={"Travel"} />
-                <BolgButtons text={"Fashion"} />
-                <BolgButtons text={"Technology"} />
-                <BolgButtons text={"Branding"} />
+                <BlogButtonsYellow handleFilter={handleFilter} />
+                <BlogButtonsDesign handleFilter={handleFilter} />
+                <BlogButtonsTravel handleFilter={handleFilter} />
+                <BlogButtonsFashion handleFilter={handleFilter} />
+                <BlogButtonsTechnology handleFilter={handleFilter} />
+                <BlogButtonsBranding handleFilter={handleFilter} />
               </div>
               <Link href={"blog"}>
-                <BolgButtons text={"See all"} />
+                <BlogButtonsSeeAll />
               </Link>
             </div>
           </div>
@@ -39,7 +47,7 @@ export const BlogPost = ({ articles, handleClickLoadMore }) => {
                 );
               })}
             </div>
-            <button onClick={handleClickLoadMore}>
+            <button onClick={handleLoadMore}>
               <p className="px-5 py-3 border border-[#696a754d] hover:border-[#4B6BFB] hover:text-[#4B6BFB] rounded-md font-workSans font-medium not-italic text-base text-[#696A75]">
                 Load More
               </p>

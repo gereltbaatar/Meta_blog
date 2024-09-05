@@ -14,7 +14,7 @@ export const Footer = () => {
     <main className="border border-[#E8E8EA] bg-[#F6F6F7] ">
       <div className="container m-auto ">
         <div className="px-20 pt-16 flex flex-col gap-6">
-          <div className="flex justify-between">
+          <div className="flex justify-between pr-32">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-3 max-w-[280px]">
                 <h1 className="font-workSans font-semibold not-italic text-lg text-[#181A2A]">
@@ -38,13 +38,13 @@ export const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2 max-w-[280px]">
-              <Link href={"home"}>
+              <Link href={"/"}>
                 <FooterHeadButtons text={"Home"} />
               </Link>
-              <Link href={"blog"}>
+              <Link href={"/blog"}>
                 <FooterHeadButtons text={"Blog"} />
               </Link>
-              <Link href={"contact"}>
+              <Link href={"/contact"}>
                 <FooterHeadButtons text={"Contact"} />
               </Link>
             </div>

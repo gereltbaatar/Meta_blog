@@ -16,7 +16,7 @@ export const AllBlogPage = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [newsNumber]);
 
   return (
     <main className="flex flex-col gap-9">

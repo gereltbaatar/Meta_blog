@@ -4,20 +4,20 @@ import { HeaderIcon, HeaderSearchIcon } from "../svg";
 
 export const Header = () => {
   return (
-    <main className="bg-white w-full">
-      <div className="flex justify-center">
+    <main className="bg-white w-full fixed z-[1]">
+      <div className="flex justify-center static z-[1]">
         <div className="lg:container lg:m-auto w-full">
           <div className="py-5 px-20">
             <div className="flex justify-between">
               <HeaderIcon />
               <div className="flex justify-center items-center gap-10">
-                <Link href={"./"}>
+                <Link href={"/"}>
                   <HeaderButton text={"Home"} />
                 </Link>
-                <Link href={"blog"}>
+                <Link href={"/blog"}>
                   <HeaderButton text={"Blog"} />
                 </Link>
-                <Link href={"contact"}>
+                <Link href={"/contact"}>
                   <HeaderButton text={"Contact"} />
                 </Link>
               </div>

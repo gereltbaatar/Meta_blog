@@ -4,16 +4,12 @@ import { Footer, Header, SinglePost } from "../parts";
 
 const SinglePostPage = () => {
   const router = useRouter();
-
   const [article, setArticle] = useState({});
-
   const fetchData = () => {
     fetch(`https://dev.to/api/articles/${router.query.id}`)
       .then((response) => response.json())
       .then((data) => setArticle(data));
   };
-
-  console.log(article, "ajilah bugd");
 
   useEffect(() => {
     fetchData();

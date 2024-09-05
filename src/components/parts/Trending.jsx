@@ -1,6 +1,19 @@
+import Link from "next/link";
 import { TrendingPost } from "../component";
+import { useEffect, useState } from "react";
 
 export const Trending = () => {
+  const [articles, setArticles] = useState([]);
+  const fetchData = () => {
+    fetch(`https://dev.to/api/articles?per_page=4&&top=1`)
+      .then((response) => response.json())
+      .then((data) => setArticles(data));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <main>
       <div className="container m-auto">
@@ -10,10 +23,17 @@ export const Trending = () => {
               Trending
             </h1>
             <div className="flex justify-between gap-5">
-              <TrendingPost />
-              <TrendingPost />
-              <TrendingPost />
-              <TrendingPost />
+              {articles.map((article) => {
+                return (
+                  <Link href={`/blog/${article.id}`}>
+                    <TrendingPost
+                      imgUrl={article.cover_image}
+                      description={article.description}
+                      tag={article.tag_list[0]}
+                    />
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>

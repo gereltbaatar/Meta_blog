@@ -4,7 +4,7 @@ export const SinglePost = ({ article }) => {
 
   return (
     <main>
-      <div className="container m-auto">
+      <div className="container m-auto mt-24">
         <div className="px-20 flex justify-center">
           <div className="flex flex-col gap-8 max-w-[800px]">
             <div className="flex flex-col gap-5">
@@ -15,13 +15,13 @@ export const SinglePost = ({ article }) => {
                 <div className="flex gap-3 items-center">
                   <div className="rounded-[50%] bg-[#F4F4F5]">
                     <img
-                      // src={article.user.profile_image}
+                      src={article.user?.profile_image}
                       alt=""
                       className="w-7 h-7 rounded-[50%]"
                     />
                   </div>
                   <p className="font-workSans font-medium not-italic text-sm text-[#696A75]">
-                    {/* {article.user.name} */}
+                    {article.user?.name}
                   </p>
                 </div>
                 <p className="font-workSans font-normal not-italic text-sm text-[#696A75]">
@@ -32,7 +32,7 @@ export const SinglePost = ({ article }) => {
 
             <div className="bg-[#F4F4F5] w-full h-auto rounded-xl">
               <img
-                // src={article.cover_image}
+                src={article?.cover_image}
                 alt=""
                 className="w-full h-auto rounded-xl"
               />

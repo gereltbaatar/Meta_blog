@@ -3,32 +3,38 @@ import { useEffect, useState } from "react";
 
 export const HomePage = () => {
   const [articles, setArticles] = useState([]);
-  const [filteredValue, setFilteredValue] = useState("");
+  const [filterV, setFilterV] = useState("");
   const [newsNumber, setNewsNumber] = useState(9);
   const fetchData = () => {
-    fetch(`https://dev.to/api/articles?per_page=${newsNumber}&`)
+    fetch(
+      `https://dev.to/api/articles?per_page=${newsNumber}&tag=${filterV}&top=2`
+    )
       .then((response) => response.json())
       .then((data) => setArticles(data));
   };
 
-  const handleClickLoadMore = () => {
+  const handleLoadMore = () => {
     setNewsNumber(newsNumber + 3);
   };
 
-  // console.log(filteredValue, "ajilah");
-
-  console.log(articles, "ajilah");
+  const handleFilter = (filtertag) => {
+    setFilterV(filtertag);
+  };
 
   useEffect(() => {
     fetchData();
-  }, [newsNumber, filteredValue]);
+  }, [newsNumber, filterV]);
 
   return (
     <main className="flex flex-col gap-[100px]">
       <Header />
-      <Contents />
+      <Contents articles={articles} />
       <Trending />
-      <BlogPost articles={articles} handleClickLoadMore={handleClickLoadMore} />
+      <BlogPost
+        articles={articles}
+        handleLoadMore={handleLoadMore}
+        handleFilter={handleFilter}
+      />
       <Footer />
     </main>
   );

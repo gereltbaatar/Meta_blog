@@ -4,7 +4,7 @@ import { Inputs } from "../component";
 export const ContactUs = () => {
   return (
     <main className="">
-      <div className="container m-auto">
+      <div className="container m-auto mt-24">
         <div className="px-20 flex flex-col items-center">
           <div className="flex flex-col items-center justify-center gap-5 pt-[14px] px-[10px]">
             <div className="max-w-[625px] flex flex-col items-start gap-5">
