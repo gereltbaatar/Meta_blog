@@ -6,33 +6,33 @@ import { useState } from "react";
 export const Header = () => {
   // const [dark, setDark] = useState(true);
 
-
-  
   return (
-    <main className="bg-white w-full fixed z-[1]">
-      <div className="flex justify-center static z-[1]">
-        <div className="lg:container lg:m-auto w-full">
-          <div className="py-5 px-20">
-            <div className="flex justify-between">
-              <HeaderIcon />
-              <div className="flex justify-center items-center gap-10">
-                <Link href={"/"}>
-                  <HeaderButton text={"Home"} />
-                </Link>
-                <Link href={"/blog"}>
-                  <HeaderButton text={"Blog"} />
-                </Link>
-                <Link href={"/contact"}>
-                  <HeaderButton text={"Contact"} />
-                </Link>
-              </div>
-              <div className="flex items-center pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-[5px] gap-3">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="font-inter text-sm not-italic font-normal bg-[#F4F4F5] text-[#A1A1AA] w-[114px] outline-none"
-                />
-                <HeaderSearchIcon />
+    <main className="w-full fixed z-[1] ">
+      <div className="bg-white">
+        <div className="flex justify-center static z-[1]">
+          <div className="lg:container lg:m-auto w-full">
+            <div className="py-5 px-20">
+              <div className="flex justify-between">
+                <HeaderIcon />
+                <div className="flex justify-center items-center gap-10">
+                  <Link href={"/"}>
+                    <HeaderButton text={"Home"} />
+                  </Link>
+                  <Link href={"/blog"}>
+                    <HeaderButton text={"Blog"} />
+                  </Link>
+                  <Link href={"/contact"}>
+                    <HeaderButton text={"Contact"} />
+                  </Link>
+                </div>
+                <div className="flex items-center pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-[5px] gap-3">
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="font-inter text-sm not-italic font-normal bg-[#F4F4F5] text-[#A1A1AA] w-[114px] outline-none"
+                  />
+                  <HeaderSearchIcon />
+                </div>
               </div>
             </div>
           </div>

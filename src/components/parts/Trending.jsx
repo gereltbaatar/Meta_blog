@@ -23,10 +23,11 @@ export const Trending = () => {
               Trending
             </h1>
             <div className="flex xl:justify-between justify-center gap-12 flex-wrap">
-              {articles.map((article) => {
+              {articles.map((article, index) => {
                 return (
                   <Link href={`/blog/${article.id}`}>
                     <TrendingPost
+                      key={index}
                       imgUrl={article.cover_image}
                       description={article.description}
                       tag={article.tag_list[0]}

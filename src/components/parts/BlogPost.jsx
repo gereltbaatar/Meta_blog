@@ -35,10 +35,11 @@ export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
           </div>
           <div className="flex flex-col gap-6 items-center">
             <div className="flex gap-5 justify-between items-center flex-wrap w-full">
-              {articles.map((article) => {
+              {articles.map((article, index) => {
                 return (
                   <Link href={`/blog/${article.id}`}>
                     <BlogPostCard
+                      key={index}
                       title={article.description}
                       imgUrl={article.cover_image}
                       tag={article.tag_list[0]}

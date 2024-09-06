@@ -7,3 +7,12 @@
   transition: 0.2s;
   box-sizing: border-box;
 }
+
+.filter {
+  backdrop-filter: blur(5px);
+}
+
+
+.background {
+  background: var(--gray-dark-90010, rgba(131, 132, 135, 0.1));
+}
