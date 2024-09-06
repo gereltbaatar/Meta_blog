@@ -1,7 +1,4 @@
 export const SinglePost = ({ article }) => {
-  console.log(article, "ajilah sigle blog");
-  console.log(article.title);
-
   return (
     <main>
       <div className="container m-auto mt-24">

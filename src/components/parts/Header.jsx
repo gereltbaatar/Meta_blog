@@ -4,7 +4,7 @@ import { HeaderIcon, HeaderSearchIcon } from "../svg";
 import { useState } from "react";
 
 export const Header = () => {
-  const [dark, setDark] = useState(true);
+  // const [dark, setDark] = useState(true);
 
 
   
