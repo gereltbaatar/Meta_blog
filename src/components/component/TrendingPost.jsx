@@ -3,7 +3,7 @@ import { Badges } from "../buttons";
 export const TrendingPost = ({ imgUrl, tag, description }) => {
   return (
     <div
-      className="flex items-end w-[290px] h-[320px] rounded-xl bg-cover bg-center  bg-[#18191b] bg-blend-soft-light "
+      className="flex items-end w-[290px] h-[320px] rounded-xl bg-cover bg-center  bg-[#14162466] bg-blend-soft-light hover:scale-[1.1] "
       style={{
         backgroundImage: `url(${imgUrl})`,
       }}

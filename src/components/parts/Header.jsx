@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { HeaderButton } from "../buttons";
 import { HeaderIcon, HeaderSearchIcon } from "../svg";
+import { useState } from "react";
 
 export const Header = () => {
+  const [dark, setDark] = useState(true);
+
+
+  
   return (
     <main className="bg-white w-full fixed z-[1]">
       <div className="flex justify-center static z-[1]">

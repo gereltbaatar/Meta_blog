@@ -1,6 +1,6 @@
 export const BlogButtonsSeeAll = () => {
   return (
-    <button className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB]">
+    <button className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB] hover:scale-[1.1]">
       See all
     </button>
   );
@@ -9,7 +9,7 @@ export const BlogButtonsSeeAll = () => {
 export const BlogButtonsDesign = ({ handleFilter }) => {
   return (
     <button
-      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB]"
+      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB] hover:scale-[1.1]"
       onClick={() => handleFilter("design")}
     >
       Design
@@ -19,7 +19,7 @@ export const BlogButtonsDesign = ({ handleFilter }) => {
 export const BlogButtonsTravel = ({ handleFilter }) => {
   return (
     <button
-      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB]"
+      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB] hover:scale-[1.1]"
       onClick={() => handleFilter("travel")}
     >
       Travel
@@ -29,17 +29,17 @@ export const BlogButtonsTravel = ({ handleFilter }) => {
 export const BlogButtonsFashion = ({ handleFilter }) => {
   return (
     <button
-      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB]"
-      onClick={() => handleFilter("fashion")}
+      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB] hover:scale-[1.1]"
+      onClick={() => handleFilter("ui")}
     >
-      Fashion
+      Ui
     </button>
   );
 };
 export const BlogButtonsTechnology = ({ handleFilter }) => {
   return (
     <button
-      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB]"
+      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB] hover:scale-[1.1]"
       onClick={() => handleFilter("technology")}
     >
       Technology
@@ -49,7 +49,7 @@ export const BlogButtonsTechnology = ({ handleFilter }) => {
 export const BlogButtonsBranding = ({ handleFilter }) => {
   return (
     <button
-      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB]"
+      className="font-workSans font-bold not-italic text-xs leading-[25px] text-[#495057] hover:text-[#4B6BFB] hover:scale-[1.1]"
       onClick={() => handleFilter("coding")}
     >
       Coding

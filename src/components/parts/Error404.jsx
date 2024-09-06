@@ -22,7 +22,7 @@ export const Error404 = () => {
               <Link href={"./"}>
                 <Badges
                   text={"Back To Home"}
-                  classEdit={" py-[10px] px-4 hover:scale-[1.05]"}
+                  classEdit={" py-[10px] px-4 hover:scale-[1.1]"}
                 />
               </Link>
             </div>

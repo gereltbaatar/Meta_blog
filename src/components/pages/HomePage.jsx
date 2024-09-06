@@ -7,7 +7,7 @@ export const HomePage = () => {
   const [newsNumber, setNewsNumber] = useState(9);
   const fetchData = () => {
     fetch(
-      `https://dev.to/api/articles?per_page=${newsNumber}&tag=${filterV}&top=2`
+      `https://dev.to/api/articles?per_page=${newsNumber}&tag=${filterV}&top=5`
     )
       .then((response) => response.json())
       .then((data) => setArticles(data));

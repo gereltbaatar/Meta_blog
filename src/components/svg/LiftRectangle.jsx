@@ -1,6 +1,9 @@
-export const LiftRectangle = () => {
+export const LiftRectangle = ({ prevSlide }) => {
   return (
-    <button className="border border-solid border-black rounded-md flex items-center justify-center xl:w-10 xl:h-10 lg:w-7 lg:h-7">
+    <button
+      onClick={prevSlide}
+      className="border border-solid border-black rounded-md flex items-center justify-center xl:w-10 xl:h-10 lg:w-7 lg:h-7 hover:border-[#4B6BFB]"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="9"

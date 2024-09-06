@@ -62,7 +62,7 @@ export const ContactUs = () => {
                   />
                 </div>
                 <Badges
-                  classEdit={"py-[10px] px-4 hover:scale-[1.05]"}
+                  classEdit={"py-[10px] px-4 hover:scale-[1.1]"}
                   text={"Send Message"}
                 />
               </div>
