@@ -7,3 +7,4 @@ export * from "./TwitterIcon";
 export * from "./InstagramIcon";
 export * from "./LinkedInIcon";
 export * from "./Logo";
+export * from "./MenuIcon";

@@ -1,4 +1,4 @@
-import { BlogPost, Contents, Footer, Header, Trending } from "../parts";
+import { BlogPost, Contents, Footer, Header, Menu, Trending } from "../parts";
 import { useEffect, useState } from "react";
 
 export const HomePage = () => {
@@ -28,14 +28,15 @@ export const HomePage = () => {
   return (
     <main className="flex flex-col gap-[100px]">
       <Header />
-      <Contents articles={articles} />
-      <Trending />
-      <BlogPost
-        articles={articles}
-        handleLoadMore={handleLoadMore}
-        handleFilter={handleFilter}
-      />
-      <Footer />
+      {/* <Contents articles={articles} /> */}
+      {/* <Trending /> */}
+      {/* <BlogPost */}
+      {/* articles={articles} */}
+      {/* handleLoadMore={handleLoadMore} */}
+      {/* handleFilter={handleFilter} */}
+      {/* /> */}
+      {/* <Footer /> */}
+      <Menu />
     </main>
   );
 };

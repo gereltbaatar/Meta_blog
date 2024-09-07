@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HeaderButton } from "../buttons";
-import { HeaderIcon, HeaderSearchIcon } from "../svg";
+import { HeaderIcon, HeaderSearchIcon, MenuIcon } from "../svg";
 import { useState } from "react";
 
 export const Header = () => {
@@ -8,13 +8,13 @@ export const Header = () => {
 
   return (
     <main className="w-full fixed z-[1] ">
-      <div className="bg-white">
+      <div className=" background filter">
         <div className="flex justify-center static z-[1]">
           <div className="lg:container lg:m-auto w-full">
-            <div className="py-5 px-20">
-              <div className="flex justify-between">
+            <div className="py-5 lg:px-20 px-4">
+              <div className="flex justify-between ">
                 <HeaderIcon />
-                <div className="flex justify-center items-center gap-10">
+                <div className="lg:flex justify-center items-center gap-10 hidden">
                   <Link href={"/"}>
                     <HeaderButton text={"Home"} />
                   </Link>
@@ -25,7 +25,7 @@ export const Header = () => {
                     <HeaderButton text={"Contact"} />
                   </Link>
                 </div>
-                <div className="flex items-center pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-[5px] gap-3">
+                <div className="lg:flex items-center pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-[5px] gap-3 hidden">
                   <input
                     type="text"
                     placeholder="Search"
@@ -33,6 +33,7 @@ export const Header = () => {
                   />
                   <HeaderSearchIcon />
                 </div>
+                <MenuIcon />
               </div>
             </div>
           </div>

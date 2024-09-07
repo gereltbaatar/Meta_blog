@@ -7,3 +7,4 @@ export * from "./Footer";
 export * from "./Error404";
 export * from "./SinglePost";
 export * from "./BlogPost";
+export * from "./Menu";

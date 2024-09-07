@@ -14,5 +14,6 @@
 
 
 .background {
-  background: var(--gray-dark-90010, rgba(131, 132, 135, 0.1));
+  background: var(--gray-dark-90010, rgba(255, 255, 255, 0.737));
+
 }
