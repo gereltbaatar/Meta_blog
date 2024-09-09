@@ -30,16 +30,16 @@ export const Contents = () => {
     <main className="">
       <div className="lg:flex lg:justify-center mt-24">
         <div className="lg:container lg:m-auto">
-          <div className="px-20">
+          <div className="lg:px-20 px-4">
             <div className="">
               <div
-                className="flex items-end justify-start min-h-[350px] lg:min-h-[400px] xl:min-h-[500px] 2xl:min-h-[600px] w-auto rounded-xl bg-cover bg-center  bg-[#14162466] bg-blend-soft-light "
+                className="flex flex-col lg:flex-col-reverse lg:justify-start justify-end min-h-[350px] lg:min-h-[400px] xl:min-h-[500px] 2xl:min-h-[600px] w-auto rounded-xl bg-cover bg-center  bg-[#14162466] bg-blend-soft-light "
                 style={{
                   backgroundImage: `url(${articles[currentIndex]?.cover_image})`,
                 }}
               >
-                <div className="flex flex-col items-start border border-solid rounded-xl border-[#E8E8EA] bg-white 2xl:w-[600px] lg:w-[350px] 2xl:p-10 lg:p-5 2xl:gap-6 lg:gap-3 m-3">
-                  <div className="flex flex-col 2xl:gap-4 lg:gap-2">
+                <div className="flex flex-col items-start border border-solid rounded-xl border-[#E8E8EA] bg-white 2xl:w-[600px] lg:w-[350px] md:w-full 2xl:p-10 lg:p-5 p-5 2xl:gap-6 lg:gap-3 gap-2 m-3">
+                  <div className="flex flex-col 2xl:gap-4 gap-2 ">
                     <Badges
                       classEdit={"px-[10px] py-1"}
                       text={articles[currentIndex]?.tag_list[0]}
@@ -54,7 +54,7 @@ export const Contents = () => {
                 </div>
               </div>
 
-              <div className="flex justify-end gap-[10px] mt-[10px]">
+              <div className="flex lg:justify-end justify-between  gap-[10px]  mt-[10px]">
                 <LiftRectangle prevSlide={prevSlide} />
                 <RightRectangle nestSlide={nestSlide} />
               </div>

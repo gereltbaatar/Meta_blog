@@ -13,10 +13,10 @@ export const Footer = () => {
   return (
     <main className="border border-[#E8E8EA] bg-[#F6F6F7] ">
       <div className="container m-auto ">
-        <div className="px-20 pt-16 flex flex-col gap-6">
-          <div className="flex justify-between pr-32">
+        <div className="lg:px-20 px-4 pt-16 flex flex-col gap-6">
+          <div className="flex flex-col lg:flex-row lg:gap-0 gap-4 justify-between pr-32">
             <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-3 max-w-[280px]">
+              <div className="flex flex-col gap-3 max-w-[280px] ">
                 <h1 className="font-workSans font-semibold not-italic text-lg text-[#181A2A]">
                   About
                 </h1>
@@ -26,7 +26,7 @@ export const Footer = () => {
                   Ut enim ad minim veniam
                 </p>
               </div>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 ">
                 <div className="flex gap-2">
                   <GmailPhone text={"Email :"} />
                   <GmailNumber text={"info@jstemplate.net"} />
@@ -57,7 +57,7 @@ export const Footer = () => {
           </div>
           <div className="">
             <div className="border-[0.5px] border-[#DCDDDF]"></div>
-            <div className="p-8 flex justify-between">
+            <div className="lg:p-8  py-8  flex justify-between">
               <div className="flex gap-[10px]">
                 <Logo />
                 <div className="">
@@ -74,7 +74,7 @@ export const Footer = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="lg:flex items-center gap-4 hidden">
                 <FooterHeadButtons text={"Terms of Use"} />
                 <div className="w-[1px] h-6 bg-[#E8E8EA]"></div>
                 <FooterHeadButtons text={"Privacy Policy"} />

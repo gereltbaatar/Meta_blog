@@ -13,7 +13,9 @@ export const Header = () => {
           <div className="lg:container lg:m-auto w-full">
             <div className="py-5 lg:px-20 px-4">
               <div className="flex justify-between ">
-                <HeaderIcon />
+                <Link href={"/"}>
+                  <HeaderIcon />
+                </Link>
                 <div className="lg:flex justify-center items-center gap-10 hidden">
                   <Link href={"/"}>
                     <HeaderButton text={"Home"} />

@@ -28,15 +28,15 @@ export const HomePage = () => {
   return (
     <main className="flex flex-col gap-[100px]">
       <Header />
-      {/* <Contents articles={articles} /> */}
-      {/* <Trending /> */}
-      {/* <BlogPost */}
-      {/* articles={articles} */}
-      {/* handleLoadMore={handleLoadMore} */}
-      {/* handleFilter={handleFilter} */}
-      {/* /> */}
-      {/* <Footer /> */}
-      <Menu />
+      <Contents articles={articles} />
+      <Trending />
+      <BlogPost
+        articles={articles}
+        handleLoadMore={handleLoadMore}
+        handleFilter={handleFilter}
+      />
+      <Footer />
+      {/* <Menu /> */}
     </main>
   );
 };

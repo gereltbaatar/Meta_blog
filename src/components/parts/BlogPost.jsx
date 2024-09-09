@@ -14,12 +14,12 @@ export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
   return (
     <main className="">
       <div className="container m-auto">
-        <div className="flex flex-col gap-8 px-20">
+        <div className="flex flex-col gap-8 lg:px-20 px-4">
           <div className="flex flex-col gap-8">
             <h1 className="font-workSans text-2xl not-italic font-bold text-[#181A2A]">
               All Blog Post
             </h1>
-            <div className="flex justify-between">
+            <div className="flex lg:justify-between items-center gap-5">
               <div className="flex  items-center gap-5">
                 <BlogButtonsYellow handleFilter={handleFilter} />
                 <BlogButtonsDesign handleFilter={handleFilter} />
