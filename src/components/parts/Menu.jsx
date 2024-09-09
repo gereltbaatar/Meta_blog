@@ -1,8 +1,32 @@
 import Link from "next/link";
 import { HeaderButton, Xicon } from "../buttons";
 import { HeaderIcon, HeaderSearchIcon } from "../svg";
+import { useState, useEffect } from "react";
 
 export const Menu = ({ posRight, zIndex, menuHidden, handleClickMenu }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [data, setData] = useState([]);
+  const [articles, setArticles] = useState([]);
+
+  const fetchData = () => {
+    fetch(`https://dev.to/api/articles`)
+      .then((response) => response.json())
+      .then((data) => setArticles(data));
+  };
+
+  // const [dark, setDark] = useState(true);
+  const handeledchanj = (value) => {
+    setSearchQuery(value);
+    const filteredArray = articles.filter((filter) =>
+      filter.title.toLowerCase().includes(value)
+    );
+
+    setData(filteredArray);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <main
       className={`w-full h-full drop-shadow-2xl filter fixed flex justify-end
@@ -26,6 +50,27 @@ export const Menu = ({ posRight, zIndex, menuHidden, handleClickMenu }) => {
                 className="font-inter text-sm not-italic font-normal bg-[#F4F4F5] text-[#A1A1AA] w-[114px] outline-none"
               />
               <HeaderSearchIcon />
+            </div>
+            <div className="">
+              {searchQuery && data.length > 0 && (
+                <div className="w-full h-auto overflow-scroll p-4 border border-gray-light-100">
+                  <div className="flex flex-col text-clip text-[var(--secondary-600)] font-work-sans bg-transparent gap-2">
+                    {data.map((article, index) => (
+                      <Link href={`/blog/${article.id}`} key={index}>
+                        <button
+                          onClick={handleOpenMenu}
+                          className="w-full h-auto border rounded-lg"
+                        >
+                          {article.title}
+                        </button>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {searchQuery && data.length === 0 && (
+                <div className="p-4 text-gray-500">Хайлт олдсонгүй.</div>
+              )}
             </div>
           </div>
 

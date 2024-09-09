@@ -4,6 +4,7 @@ import { HeaderIcon, HeaderSearchIcon, MenuIcon } from "../svg";
 import { useState, useEffect } from "react";
 
 export const Header = ({ handleClickMenu }) => {
+  const [searchQuery, setSearchQuery] = useState("");
   const [data, setData] = useState([]);
   const [articles, setArticles] = useState([]);
 
@@ -15,6 +16,7 @@ export const Header = ({ handleClickMenu }) => {
 
   // const [dark, setDark] = useState(true);
   const handeledchanj = (value) => {
+    setSearchQuery(value);
     const filteredArray = articles.filter((filter) =>
       filter.title.toLowerCase().includes(value)
     );
@@ -57,20 +59,27 @@ export const Header = ({ handleClickMenu }) => {
                     />
                     <HeaderSearchIcon />
                   </div>
-                  <div className="absolute z-[-2] overflow-scroll w-[166px] h-[500px] outline-none">
-                    <div className=" flex flex-col flex-wrap gap-4 text-[#A1A1AA]  bg-[#F4F4F5]  mt-3">
-                      {data.map((article, index) => (
-                        <Link href={`/blog/${article.id}`}>
-                          <div
-                            className="w-full h-auto border border-[#A1A1AA] rounded-[5px]"
-                            key={index}
-                          >
-                            {article.title}
-                          </div>
-                        </Link>
-                      ))}
+                  {searchQuery && data.length > 0 && (
+                    <div className=" ">
+                      <div className=" absolute flex flex-col  bg-[#F4F4F5] max-w-[166px] max-h-[400px] overflow-scroll gap-2 pl-4 p-2 mt-4 rounded-lg">
+                        {data.map((article, index) => (
+                          <Link href={`/blog/${article.id}`} key={index}>
+                            <button
+                              onClick={handeledchanj}
+                              className="w-full border border-[#A1A1AA] font-workSans text-xs text-[#A1A1AA] h-auto rounded-md"
+                            >
+                              {article.title}
+                            </button>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
+                  {searchQuery && data.length === 0 && (
+                    <div className="absolute max-w-[166px] bg-[#F4F4F5] pl-4 p-2 mt-4 text-[#A1A1AA] rounded-lg">
+                      Хайлт олдсонгүй.
+                    </div>
+                  )}
                 </div>
                 <MenuIcon handleClickMenu={handleClickMenu} />
               </div>
