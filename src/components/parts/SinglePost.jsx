@@ -2,7 +2,7 @@ export const SinglePost = ({ article }) => {
   return (
     <main>
       <div className="container m-auto mt-24">
-        <div className="px-20 flex justify-center">
+        <div className=" lg:px-20 px-4 flex justify-center">
           <div className="flex flex-col gap-8 max-w-[800px]">
             <div className="flex flex-col gap-5">
               <h1 className="self-stretch font-workSans font-semibold not-italic text-4xl text-[#181A2A]">
