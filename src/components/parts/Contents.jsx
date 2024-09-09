@@ -6,7 +6,7 @@ export const Contents = () => {
   const [articles, setArticles] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const fetchData = () => {
-    fetch(`https://dev.to/api/articles?per_page=5`)
+    fetch(`https://dev.to/api/articles`)
       .then((response) => response.json())
       .then((data) => setArticles(data));
   };

@@ -2,6 +2,9 @@ import { BlogPost, Contents, Footer, Header, Menu, Trending } from "../parts";
 import { useEffect, useState } from "react";
 
 export const HomePage = () => {
+  const [posRight, setPosRight] = useState(false);
+  const [zIndex, setZIndex] = useState(false);
+  const [menuHidden, setMenuHidden] = useState(false);
   const [articles, setArticles] = useState([]);
   const [filterV, setFilterV] = useState("");
   const [newsNumber, setNewsNumber] = useState(9);
@@ -25,9 +28,15 @@ export const HomePage = () => {
     fetchData();
   }, [newsNumber, filterV]);
 
+  const handleClickMenu = () => {
+    setPosRight(!posRight);
+    setZIndex(!zIndex);
+    setMenuHidden(!menuHidden);
+  };
+
   return (
     <main className="flex flex-col gap-[100px]">
-      <Header />
+      <Header handleClickMenu={handleClickMenu} />
       <Contents articles={articles} />
       <Trending />
       <BlogPost
@@ -36,7 +45,12 @@ export const HomePage = () => {
         handleFilter={handleFilter}
       />
       <Footer />
-      {/* <Menu /> */}
+      <Menu
+        posRight={posRight}
+        zIndex={zIndex}
+        menuHidden={menuHidden}
+        handleClickMenu={handleClickMenu}
+      />
     </main>
   );
 };
