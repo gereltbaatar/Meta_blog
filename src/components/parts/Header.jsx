@@ -9,7 +9,7 @@ export const Header = ({ handleClickMenu }) => {
   const [articles, setArticles] = useState([]);
 
   const fetchData = () => {
-    fetch(`https://dev.to/api/articles`)
+    fetch(`https://dev.to/api/articlesper_page=1000`)
       .then((response) => response.json())
       .then((data) => setArticles(data));
   };
@@ -31,7 +31,7 @@ export const Header = ({ handleClickMenu }) => {
   return (
     <main className="w-full fixed z-[1] ">
       <div className=" background filter">
-        <div className="flex justify-center static z-[1]">
+        <div className="flex justify-center">
           <div className="lg:container lg:m-auto w-full">
             <div className="py-5 lg:px-20 px-4">
               <div className="flex justify-between ">
@@ -54,7 +54,9 @@ export const Header = ({ handleClickMenu }) => {
                     <input
                       type="text"
                       placeholder="Search"
-                      onChange={(event) => handeledchanj(event.target.value)}
+                      onChange={(event) =>
+                        handeledchanj(event.target.value.trim().toLowerCase())
+                      }
                       className="font-inter text-sm not-italic font-normal bg-[#F4F4F5] text-[#A1A1AA] w-[114px] outline-none"
                     />
                     <HeaderSearchIcon />

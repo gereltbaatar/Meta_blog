@@ -6,11 +6,11 @@ export const HomePage = () => {
   const [zIndex, setZIndex] = useState(false);
   const [menuHidden, setMenuHidden] = useState(false);
   const [articles, setArticles] = useState([]);
-  const [filterV, setFilterV] = useState("");
+  const [filterValeu, setFilterValeu] = useState("");
   const [newsNumber, setNewsNumber] = useState(9);
   const fetchData = () => {
     fetch(
-      `https://dev.to/api/articles?per_page=${newsNumber}&tag=${filterV}&top=5`
+      `https://dev.to/api/articles?per_page=${newsNumber}&tag=${filterValeu}&top=5`
     )
       .then((response) => response.json())
       .then((data) => setArticles(data));
@@ -21,12 +21,12 @@ export const HomePage = () => {
   };
 
   const handleFilter = (filtertag) => {
-    setFilterV(filtertag);
+    setFilterValeu(filtertag);
   };
 
   useEffect(() => {
     fetchData();
-  }, [newsNumber, filterV]);
+  }, [newsNumber, filterValeu]);
 
   const handleClickMenu = () => {
     setPosRight(!posRight);

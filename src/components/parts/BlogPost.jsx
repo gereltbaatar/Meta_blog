@@ -19,7 +19,7 @@ export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
             <h1 className="font-workSans text-2xl not-italic font-bold text-[#181A2A]">
               All Blog Post
             </h1>
-            <div className="flex lg:justify-between items-center gap-5">
+            <div className="flex flex-wrap lg:justify-between items-center md:gap-5 gap-2  lg:w-full lg:h-full overflow-auto">
               <div className="flex  items-center gap-5">
                 <BlogButtonsYellow handleFilter={handleFilter} />
                 <BlogButtonsDesign handleFilter={handleFilter} />
@@ -37,9 +37,8 @@ export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
             <div className="flex gap-5 justify-between items-center flex-wrap w-full">
               {articles.map((article, index) => {
                 return (
-                  <Link href={`/blog/${article.id}`}>
+                  <Link href={`/blog/${article.id}`} key={index}>
                     <BlogPostCard
-                      key={index}
                       title={article.description}
                       imgUrl={article.cover_image}
                       tag={article.tag_list[0]}
