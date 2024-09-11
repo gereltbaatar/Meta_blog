@@ -9,12 +9,11 @@ export const Header = ({ handleClickMenu }) => {
   const [articles, setArticles] = useState([]);
 
   const fetchData = () => {
-    fetch(`https://dev.to/api/articlesper_page=1000`)
+    fetch(`https://dev.to/api/articles?per_page=1000`)
       .then((response) => response.json())
       .then((data) => setArticles(data));
   };
 
-  // const [dark, setDark] = useState(true);
   const handeledchanj = (value) => {
     setSearchQuery(value);
     const filteredArray = articles.filter((filter) =>
@@ -54,9 +53,7 @@ export const Header = ({ handleClickMenu }) => {
                     <input
                       type="text"
                       placeholder="Search"
-                      onChange={(event) =>
-                        handeledchanj(event.target.value.trim().toLowerCase())
-                      }
+                      onChange={(event) => handeledchanj(event.target.value)}
                       className="font-inter text-sm not-italic font-normal bg-[#F4F4F5] text-[#A1A1AA] w-[114px] outline-none"
                     />
                     <HeaderSearchIcon />

@@ -52,6 +52,7 @@ export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
                 Load More
               </p>
             </button>
+            
           </div>
         </div>
       </div>
