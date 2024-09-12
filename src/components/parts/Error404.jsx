@@ -4,7 +4,7 @@ import { Badges } from "../buttons";
 export const Error404 = () => {
   return (
     <main className="">
-      <div className="container m-auto mt-24">
+      <div className="container m-auto mt-24 md:mb-36 mb-0">
         <div className="flex flex-col lg:px-20 px-4">
           <div className="flex items-center justify-center gap-10">
             <h1 className="flex justify-center items-center font-workSans font-normal not-italic text-7xl leading-[72px]">
