@@ -22,7 +22,7 @@ export const Trending = () => {
             <h1 className="font-workSans text-2xl not-italic font-bold text-[#181A2A]">
               Trending
             </h1>
-            <div className="flex xl:justify-between justify-center gap-12 flex-wrap">
+            <div className="flex lg:justify-between justify-start md:w-full max-w-[1300px] xl:gap-12 gap-4 overflow-scroll">
               {articles.map((article, index) => {
                 return (
                   <Link href={`/blog/${article.id}`}>
