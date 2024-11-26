@@ -1,9 +1,13 @@
-export const HeaderButton = ({ text }) => {
+export const HeaderButton = ({ text, pathname, path }) => {
   return (
-    <button>
-      <p className="font-workSans text-base not-italic font-normal hover:text-[#4B6BFB] hover:scale-[1.1]">
+    <div>
+      <p
+        className={`font-workSans text-base not-italic font-normal hover:text-[#4B6BFB] ${
+          pathname === path ? "text-[#4B6BFB]" : "text-black"
+        } hover:scale-[1.1]`}
+      >
         {text}
       </p>
-    </button>
+    </div>
   );
 };

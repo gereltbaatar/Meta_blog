@@ -3,16 +3,16 @@ import { BlogAllPostCard } from "../component";
 
 export const BlogAll = ({ articles, handleClickAllBlog }) => {
   return (
-    <main className="">
+    <main>
       <div className="container m-auto mt-24">
-        <div className="flex flex-col gap-8 lg:px-20 px-4">
+        <div className="flex flex-col gap-8 lg-px-0 px-4 h-full">
           <div className="flex flex-col gap-8">
             <h1 className="font-workSans text-2xl not-italic font-bold text-[#181A2A]">
               All Blog Post
             </h1>
           </div>
-          <div className="flex flex-col gap-6 items-center">
-            <div className="flex justify-between gap-5 flex-wrap w-full">
+          <div className="flex flex-col gap-6 items-center h-full">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 justify-between items-center flex-wrap w-full h-full">
               {articles.map((article, index) => {
                 return (
                   <Link href={`/blog/${article.id}`}>

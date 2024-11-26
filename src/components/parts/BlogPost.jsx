@@ -14,7 +14,7 @@ export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
   return (
     <main className="">
       <div className="container m-auto">
-        <div className="flex flex-col gap-8 lg:px-20 px-4">
+        <div className="flex flex-col gap-8 lg-px-0 px-4">
           <div className="flex flex-col gap-8">
             <h1 className="font-workSans text-2xl not-italic font-bold text-[#181A2A]">
               All Blog Post
@@ -34,7 +34,7 @@ export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
             </div>
           </div>
           <div className="flex flex-col gap-6 items-center">
-            <div className="flex gap-5 justify-between items-center flex-wrap w-full">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 justify-between items-center flex-wrap w-full">
               {articles.map((article, index) => {
                 return (
                   <Link href={`/blog/${article.id}`} key={index}>
@@ -52,7 +52,6 @@ export const BlogPost = ({ articles, handleLoadMore, handleFilter }) => {
                 Load More
               </p>
             </button>
-            
           </div>
         </div>
       </div>

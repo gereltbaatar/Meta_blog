@@ -17,7 +17,7 @@ export const Trending = () => {
   return (
     <main>
       <div className="container m-auto">
-        <div className="lg:px-20 px-4">
+        <div className="lg-px-0 px-4">
           <div className="flex flex-col gap-8">
             <h1 className="font-workSans text-2xl not-italic font-bold text-[#181A2A]">
               Trending

@@ -2,11 +2,15 @@ import Link from "next/link";
 import { HeaderButton } from "../buttons";
 import { HeaderIcon, HeaderSearchIcon, MenuIcon } from "../svg";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export const Header = ({ handleClickMenu }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [data, setData] = useState([]);
   const [articles, setArticles] = useState([]);
+  const pathname = usePathname();
+
+  console.log("phate name shuuu ", pathname);
 
   const fetchData = () => {
     fetch(`https://dev.to/api/articles?per_page=1000`)
@@ -29,23 +33,35 @@ export const Header = ({ handleClickMenu }) => {
 
   return (
     <main className="w-full fixed z-[1] ">
-      <div className=" background filter">
+      <div className="background filter">
         <div className="flex justify-center">
           <div className="lg:container lg:m-auto w-full">
-            <div className="py-5 lg:px-20 px-4">
+            <div className="py-5 lg:px-0 px-4">
               <div className="flex justify-between ">
                 <Link href={"/"}>
                   <HeaderIcon />
                 </Link>
                 <div className="lg:flex justify-center items-center gap-10 hidden">
                   <Link href={"/"}>
-                    <HeaderButton text={"Home"} />
+                    <HeaderButton
+                      text={"Home"}
+                      pathname={pathname}
+                      path={"/"}
+                    />
                   </Link>
                   <Link href={"/blog"}>
-                    <HeaderButton text={"Blog"} />
+                    <HeaderButton
+                      text={"Blog"}
+                      pathname={pathname}
+                      path={"/blog"}
+                    />
                   </Link>
                   <Link href={"/contact"}>
-                    <HeaderButton text={"Contact"} />
+                    <HeaderButton
+                      text={"Contact"}
+                      pathname={pathname}
+                      path={"/contact"}
+                    />
                   </Link>
                 </div>
                 <div className="">

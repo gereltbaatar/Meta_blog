@@ -30,7 +30,7 @@ export const Contents = () => {
     <main className="">
       <div className="lg:flex lg:justify-center mt-24">
         <div className="lg:container lg:m-auto">
-          <div className="lg:px-20 px-4">
+          <div className="lg-px-0 px-4">
             <div className="">
               <div
                 className="flex flex-col lg:flex-col-reverse lg:justify-start justify-end min-h-[350px] lg:min-h-[400px] xl:min-h-[500px] 2xl:min-h-[600px] w-auto rounded-xl bg-cover bg-center  bg-[#14162466] bg-blend-soft-light "

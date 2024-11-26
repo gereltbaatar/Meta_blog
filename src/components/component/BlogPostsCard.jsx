@@ -2,7 +2,7 @@ import { BadgesNegative } from "../buttons/BadgesNegative";
 
 export const BlogPostCard = ({ title, imgUrl, tag }) => {
   return (
-    <div className="max-w-[392px] border border-solid border-[#E8E8EA]  rounded-xl p-4 flex flex-col gap-4 hover:shadow-md hover:border-[rgb(207,207,207)]">
+    <div className="max-w-[392px] max-h-[498px] h-full border border-solid border-[#E8E8EA]  rounded-xl p-4 flex flex-col gap-4 hover:shadow-md hover:border-[rgb(207,207,207)]">
       <div className="h-[240px] max-w-[360px] rounded-md bg-[#F4F4F5] ">
         <img src={`${imgUrl}`} alt="" className="h-full w-auto object-cover " />
       </div>

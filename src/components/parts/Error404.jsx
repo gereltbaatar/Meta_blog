@@ -5,7 +5,7 @@ export const Error404 = () => {
   return (
     <main className="">
       <div className="container m-auto mt-24 md:mb-36 mb-0">
-        <div className="flex flex-col lg:px-20 px-4">
+        <div className="flex flex-col lg-px-0 px-4">
           <div className="flex items-center justify-center gap-10">
             <h1 className="flex justify-center items-center font-workSans font-normal not-italic text-7xl leading-[72px]">
               404
@@ -19,7 +19,7 @@ export const Error404 = () => {
                 We're sorry, This page is unknown or does not exist the page you
                 are looking for.
               </p>
-              <Link href={"./"}>
+              <Link href={"/"}>
                 <Badges
                   text={"Back To Home"}
                   classEdit={" py-[10px] px-4 hover:scale-[1.1]"}
