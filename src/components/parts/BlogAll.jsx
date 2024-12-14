@@ -13,11 +13,14 @@ export const BlogAll = ({ articles, handleClickAllBlog }) => {
           </div>
           <div className="flex flex-col gap-6 items-center h-full">
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 justify-between items-center flex-wrap w-full h-full">
-              {articles.map((article, index) => {
+              {articles.map((article) => {
                 return (
-                  <Link href={`/blog/${article.id}`}>
+                  <Link
+                    href={`/blog/${article.id}`}
+                    key={article.id}
+                    className="w-full h-full flex justify-center items-center"
+                  >
                     <BlogAllPostCard
-                      key={index}
                       title={article.description}
                       imgUrl={article.cover_image}
                       tag={article.tag_list[0]}
